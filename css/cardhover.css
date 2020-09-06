@@ -1,0 +1,265 @@
+/* Reset Css kodlar */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li,
+ol {
+  list-style-type: none;
+}
+/* Css Kodları
+:root {
+  --tum: 100%;
+  --tumh: 100%;
+  --margin-r: 60px;
+  --margin-l: 60px;
+  --padding: 60px;
+  --card-background: white;
+  --body-backgound: aquamarine;
+  --black: black;
+  --red: red;
+  --aque: aquamarine;
+  --blue: blue;
+}
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--body-backgound);
+}
+.card {
+  width: 400px;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  transition: 300ms all;
+  background-color: var(--blue);
+
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+}
+.card img {
+  width: var(--tum);
+  height: var(--tumh);
+  object-fit: cover;
+  transition: 300ms all;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  bottom: -60%;
+  height: var(--tumh);
+  width: var(--tum);
+  background-color: white;
+  color: var(--black);
+  padding: var(--padding);
+  transition: 300ms all;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+}
+.overlay-text h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.overlay-text p {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.overlay-text span p {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.overlay-text a {
+  display: block;
+  width: 150px;
+  height: 50px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  font-size: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 120px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  transition: 300ms all;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+}
+.overlay-text a i {
+  font-size: 12px;
+  display: inline-block;
+  margin-left: -17px;
+  opacity: 0;
+  transition: 300ms all;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+}
+.overlay a:hover {
+  background-color: var(--red);
+}
+.overlay-text a:hover i {
+  opacity: 1;
+  margin-left: 4px;
+}
+.card:hover .overlay {
+  bottom: -50%;
+}
+.card:hover .overlay-text a {
+  margin-top: 20px;
+}
+.card:hover img {
+  transform: scale(1.2) translateY(-20px);
+  -webkit-transform: scale(1.2) translateY(-20px);
+  -moz-transform: scale(1.2) translateY(-20px);
+  -ms-transform: scale(1.2) translateY(-20px);
+  -o-transform: scale(1.2) translateY(-20px);
+  opacity: 0.8;
+} */
+:root {
+  --genislik: 100%;
+  --kenar: 45px;
+  --altbosşıl: 20px;
+  --yukseklik: 100%;
+  --red: red;
+  --green: green;
+  --renk1: #1abc9c;
+  --renk2: #cb4335;
+  --renk3: #34495e;
+  --white: white;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--renk1);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card {
+  width: 400px;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+.card img {
+  width: var(--genislik);
+  height: var(--genislik);
+  object-fit: cover;
+  transition: 300ms all;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  bottom: -60%;
+  background-color: var(--white);
+  width: var(--genislik);
+  height: var(--yukseklik);
+  align-items: center;
+  justify-content: center;
+  padding: var(--kenar);
+  transition: 300ms all;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+}
+.overlay-text h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: var(--altbosşıl);
+}
+.overlay-text p {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.overlay-text p:nth-child(1) {
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.overlay-text a {
+  display: block;
+  width: 180px;
+  height: 50px;
+  background-color: blue;
+  color: var(--white);
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  margin-top: 100px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  transition: 300ms all;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+}
+.overlay-text a i {
+  display: inline-block;
+  font-size: 13px;
+  margin-left: -17px;
+  opacity: 0;
+  transition: 300ms all;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+}
+.overlay-text a:hover {
+  background-color: var(--red);
+}
+.overlay-text a:hover i {
+  opacity: 1;
+  margin-left: 1px;
+}
+.card:hover .overlay {
+  bottom: -50%;
+}
+.card:hover .overlay-text a {
+  margin-top: 30px;
+}
+.card:hover img {
+  transform: scale(1.2) translateY(-20px);
+  -webkit-transform: scale(1.2) translateY(-20px);
+  -moz-transform: scale(1.2) translateY(-20px);
+  -ms-transform: scale(1.2) translateY(-20px);
+  -o-transform: scale(1.2) translateY(-20px);
+}

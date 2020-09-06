@@ -1,0 +1,155 @@
+body {
+  background-color: black;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+/* 
+İLK YAPIŞ
+.container {
+  width: 600px;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+}
+.container span {
+  font-size: 48px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 600;
+  color: white;
+  animation: animasyon 10s ease-in-out infinite;
+  -webkit-animation: animasyon 10s ease-in-out infinite;
+  animation-fill-mode: backwards;
+  transform: translateY(-100px);
+  -webkit-transform: translateY(-100px);
+  -moz-transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
+  -o-transform: translateY(-100px);
+  opacity: 0;
+}
+.container span:nth-child(2) {
+  animation-delay: 3s;
+}
+.container span:nth-child(3) {
+  animation-delay: 6s;
+}
+
+@keyframes animasyon {
+  0% {
+    transform: translateY(-100px);
+    -webkit-transform: translateY(-100px);
+    -moz-transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
+    -o-transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  5% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    opacity: 1;
+  }
+
+  30% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    -o-transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    -o-transform: translateY(100px);
+    opacity: 0;
+  }
+} */
+
+/* İkinci yapış */
+.container {
+  width: 500px;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+}
+.container span {
+  font-size: 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: white;
+  animation-fill-mode: backwards;
+  transform: translateY(-100px);
+  animation: animasyon 10s ease-in-out infinite;
+  -webkit-animation: animasyon 10s ease-in-out infinite;
+  -webkit-transform: translateY(-100px);
+  -moz-transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
+  -o-transform: translateY(-100px);
+  opacity: 0;
+}
+.container span:nth-child(2) {
+  animation-delay: 3s;
+}
+.container span:nth-child(3) {
+  animation-delay: 6s;
+}
+@keyframes animasyon {
+  0% {
+    transform: translateY(-100px);
+    -webkit-transform: translateY(-100px);
+    -moz-transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
+    -o-transform: translateY(-100px);
+    opacity: 0;
+  }
+  5% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    -o-transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100px);
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    -o-transform: translateY(100px);
+    opacity: 0;
+  }
+}
