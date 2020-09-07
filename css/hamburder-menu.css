@@ -68,5 +68,11 @@ body {
   background-color: seagreen;
 }
 .hamburger-btn:hover .line:nth-child(2) {
-  opacity: 0;
+  transform: translateY(25px);
+  -webkit-transform: translateY(25px);
+  -moz-transform: translateY(25px);
+  -ms-transform: translateY(25px);
+  -o-transform: translateY(25px);
+  background-color: seagreen;
+  width: 40px;
 }
