@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: box-sizing;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box {
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 300ms all;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: white;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0;
+  transition: 300ms all;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+}
+.overlay-text span i {
+  font-size: 23px;
+  color: seagreen;
+  display: block;
+  height: 300px;
+  text-align: center;
+  align-items: center;
+  line-height: 300px;
+  justify-content: center;
+}
+.box:hover .overlay {
+  opacity: 0.8;
+}
+.box:hover .overlay-text i {
+  opacity: 1;
+}
+.box:hover img {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}

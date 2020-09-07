@@ -5,44 +5,43 @@ body {
   justify-content: center;
 }
 .box {
-  width: 200px;
-  height: 200px;
-  background-color: blue;
+  width: 250px;
+  height: 250px;
   color: white;
+  background-color: tomato;
   text-align: center;
-  line-height: 200px;
-  font-size: 25px;
+  line-height: 250px;
+  font-size: 23px;
+  position: relative;
+  transition: 300ms all;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  transition: 300ms all;
-  cursor: pointer;
-  -webkit-transition: 300ms all;
-  -moz-transition: 300ms all;
-  -ms-transition: 300ms all;
-  -o-transition: 300ms all;
-  position: relative;
 }
 .box:hover {
+  box-shadow: 0 30px 30px rgba(255, 99, 71, 0.295);
   transform: translateY(-10px);
-  box-shadow: 0 30px 15px rgba(0, 0, 255, 0.2);
   -webkit-transform: translateY(-10px);
   -moz-transform: translateY(-10px);
   -ms-transform: translateY(-10px);
   -o-transform: translateY(-10px);
 }
-.box::after,
-.box::before {
+.box::before,
+.box::after {
   content: "";
-  display: block;
   position: absolute;
-  border: 2px solid red;
+  display: block;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
+  border: 2px solid blue;
   border-radius: 100%;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
@@ -53,13 +52,13 @@ body {
   -moz-transition: 300ms all;
   -ms-transition: 300ms all;
   -o-transition: 300ms all;
-  animation: animate 1500ms infinite;
-  -webkit-animation: animate 1500ms infinite;
+  animation: animation 2000ms infinite;
+  -webkit-animation: animation 2000ms infinite;
 }
 .box::after {
   animation-delay: 500ms;
 }
-@keyframes animate {
+@keyframes animation {
   0% {
     opacity: 0;
     transform: scale(0.5);
