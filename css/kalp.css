@@ -1,0 +1,96 @@
+.container{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+align-items:center;
+
+}
+.kalp{
+    position: relative;
+}
+.kalpsag{
+  height: 200px;
+  width: 100px;
+  background-color: red;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    transition: 300ms all;
+    
+
+}
+.kalpsol{
+  height: 200px;
+  width: 100px;
+  background-color: red;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    transition: 300ms all;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.overlay{
+    position: absolute;
+    z-index: 4;
+    left: 16%;
+    top: 50%;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    color: white;
+    font-size: 32px;
+}
+
+.kalp:hover .kalpsol{
+    transform: rotate(-45deg) translateX(-50px);
+}
+.kalp:hover .kalpsag{
+    transform: rotate(45deg) translateX(50px);
+
+}
+.kalp:hover::after{
+    content: "Veysel";
+    z-index: 2;
+    position: absolute;
+    left: 5%;
+    top: 60%;
+    color: white;
+    font-size: 36px;
+    transition: 300ms all;
+    font-weight: 600;
+    
+}
+.kalp::before{
+    content: "I";
+    position: absolute;
+    top: 50%;
+    left: -30%;
+    color: black;
+    font-size: 36px;
+    transition: 300ms all;
+    
+}
+.kalp::after{
+    content: "Programmer";
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    color: black;
+    font-size: 36px;
+    transition: 300ms all;
+    
+}
+.kalp:hover .love{
+  margin-left: 1000px;
+}
+.love{
+    padding: 15px;
+    margin: 10px;
+    background-color: brown;
+    color: black;
+    transition: 300ms all;
+    transform-origin: center;
+        
+    font-size: 36px;
+    
+}
