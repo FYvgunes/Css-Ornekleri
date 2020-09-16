@@ -12,13 +12,14 @@ html {
   scroll-behavior: smooth;
 }
 input[type="checkbox"] {
+  display: flex;
   width: 80px;
   height: 80px;
   position: fixed;
-  left: 100px;
-  top: 100px;
-  cursor: pointer;
+  left: 80px;
+  top: 80px;
   opacity: 0;
+  cursor: pointer;
   z-index: 1000;
 }
 span.icon {
@@ -28,40 +29,39 @@ span.icon {
   width: 80px;
   height: 80px;
   position: fixed;
-  left: 100px;
-  top: 100px;
-  cursor: pointer;
-  opacity: 1;
+  left: 80px;
+  top: 80px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  z-index: 1001;
+  cursor: pointer;
   pointer-events: none;
+  z-index: 1001;
 }
-
 span.icon::before {
-  display: block;
   content: "Menu";
-  color: #fff;
-  text-align: center;
+  display: flex;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
   line-height: 80px;
-  font-size: 20px;
+  font-size: 18px;
   text-transform: uppercase;
 }
 input[type="checkbox"]:checked ~ span.icon::before {
-  content: "close";
+  content: "Close";
 }
 ul {
-  background-color: rgb(10, 90, 57);
+  display: flex;
   width: 300px;
   height: 100vh;
-  justify-content: center;
-  display: flex;
+  background-color: green;
   flex-direction: column;
-  padding-left: 40px;
+  justify-content: center;
+  padding: 40px 30px;
   position: fixed;
-  left: -350px;
+  left: -360px;
   top: 0;
   transition: 300ms all;
   -webkit-transition: 300ms all;
@@ -71,48 +71,63 @@ ul {
 }
 ul li {
   display: block;
-  margin-bottom: 40px;
 }
 ul li a {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 17px;
-  transition: 300ms all;
   display: block;
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: 300ms all;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+  position: relative;
+}
+ul li a::before {
+  display: block;
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  top: 100%;
+  left: -360px;
+  transition: 300ms all;
   -webkit-transition: 300ms all;
   -moz-transition: 300ms all;
   -ms-transition: 300ms all;
   -o-transition: 300ms all;
 }
-ul li a:hover {
-  transform: translateX(15px);
-  -webkit-transform: translateX(15px);
-  -moz-transform: translateX(15px);
-  -ms-transform: translateX(15px);
-  -o-transform: translateX(15px);
+ul li a:hover::before {
+  left: 0;
 }
-
+ul li a:hover {
+  margin-left: 10px;
+}
 input[type="checkbox"]:checked ~ ul {
   left: 0;
 }
 section {
-  height: 100vh;
   display: flex;
+  height: 100vh;
+  align-items: center;
   justify-content: center;
-  line-height: 100vh;
   color: #fff;
-  font-size: 23px;
   text-transform: uppercase;
+  font-size: 23px;
 }
 section#home {
   background-color: crimson;
 }
 section#developer {
-  background-color: blue;
+  background-color: rgb(38, 0, 255);
 }
 section#frontend {
-  background-color: sandybrown;
+  background-color: rgb(243, 9, 243);
 }
 section#contact {
-  background-color: rgb(4, 190, 159);
+  background-color: rgb(203, 206, 39);
 }
