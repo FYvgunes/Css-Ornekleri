@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: box-show;
+}
+a {
+  text-decoration: none;
+}
+ul li ol {
+  list-style-type: none;
+}
+body {
+  height: 2000px;
+}
+header {
+  background: url("../images/italiya-vatikanskiy-muzey.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 300ms all;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 0 10px;
+}
+.navbar ul li:last-child {
+  margin-right: 0;
+  padding: 0 0px;
+}
+.navbar ul li a {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  transition: 300ms all;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+}
+.navbar ul li a:hover {
+  color: teal;
+  background-color: #fff;
+  transform: translateY(5px) scale(1.1);
+  -webkit-transform: translateY(5px) scale(1.1);
+  -moz-transform: translateY(5px) scale(1.1);
+  -ms-transform: translateY(5px) scale(1.1);
+  -o-transform: translateY(5px) scale(1.1);
+}
+.navbar-scrol {
+  padding: 20px 20px;
+  background-color: rgba(170, 59, 39, 0.726);
+}
+.navbar .logo i {
+  color: rgba(255, 255, 29, 0.452);
+  font-size: 50px;
+  transition: 300ms all;
+  -webkit-transition: 400ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+}
+.navbar .logo i:hover {
+  color: rgba(255, 255, 0, 0.849);
+}
