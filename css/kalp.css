@@ -58,6 +58,7 @@ align-items:center;
     font-size: 36px;
     transition: 300ms all;
     font-weight: 600;
+    transition: 300ms all;
     
 }
 .kalp::before{
