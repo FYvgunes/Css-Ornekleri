@@ -1,4 +1,4 @@
-.container {
+/* .container {
     display: grid;
     grid-template-columns: repeat(3, 2fr);
 
@@ -20,8 +20,107 @@
 
 }
 
-.box:nth-child(2) {
-    grid-column: 1/ 2;
-    grid-row: 1/ 2;
+.box:nth-child(6) {
+    grid-column: 1/ span 2;
+    grid-row: 1/ span 2; */
 
+/* } */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: "h h h h"
+        "s m m m"
+
+        "v v o o "
+        "p1 p2 p3 p4"
+
+        "c c c c"
+
+        "f f f f ";
+}
+
+.header {
+    background-color: crimson;
+    color: #fff;
+    grid-area: h;
+    padding: 30px;
+
+}
+
+.slider {
+    background-color: slategray;
+    color: #fff;
+    grid-area: s;
+    padding: 30px;
+
+}
+
+.main {
+    background-color: tomato;
+    color: #fff;
+    grid-area: m;
+    padding: 30px;
+
+}
+
+.about {
+    background-color: rgb(80, 36, 28);
+    color: #fff;
+    grid-area: o;
+    padding: 30px;
+
+}
+
+.about-img {
+    background-color: rgb(8, 81, 104);
+    color: #fff;
+    grid-area: v;
+    padding: 30px;
+}
+
+.port2 {
+    background-color: rgb(32, 151, 135);
+    color: #fff;
+    grid-area: p2;
+    padding: 30px;
+}
+
+.port1 {
+    background-color: rgb(35, 88, 81);
+    color: #fff;
+    grid-area: p1;
+    padding: 30px;
+}
+
+.port3 {
+    background-color: rgb(90, 189, 176);
+    color: #fff;
+    grid-area: p3;
+    padding: 30px;
+}
+
+.port4 {
+    background-color: rgb(16, 43, 39);
+    color: #fff;
+    grid-area: p4;
+    padding: 30px;
+}
+
+.contact {
+    background-color: rgb(86, 151, 32);
+    color: #fff;
+    grid-area: c;
+    padding: 30px;
+}
+
+.footer {
+    background-color: violet;
+    color: #fff;
+    grid-area: f;
+    padding: 30px;
 }
