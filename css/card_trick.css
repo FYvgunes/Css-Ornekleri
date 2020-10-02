@@ -13,6 +13,11 @@ body {
 .card-list {
     display: flex;
     padding: 3rem;
+    max-width: 150px;
+    max-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 
 }
@@ -127,6 +132,14 @@ body {
 }
 
 .card-header h2:hover {
+    background: linear-gradient(90deg, #ff8a00, #e82e71);
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card-header p:hover {
     background: linear-gradient(90deg, #ff8a00, #e82e71);
     text-shadow: none;
     background-clip: text;
