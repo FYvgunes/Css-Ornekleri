@@ -1,43 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@400;500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
 
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     display: flex;
-    height: 100vh;
     justify-content: center;
+    height: 100vh;
     align-items: center;
-
     background-color: #060c21;
+    font-family: 'Sansita Swashed',
+        cursive;
+
 }
 
 .container {
     position: relative;
-    width: 90%;
     display: grid;
+    width: 90%;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    grid-template-rows: auto;
     grid-gap: 0 40px;
+    grid-template-rows: auto;
 }
 
 .container .box {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 400px;
-    background-color: #060c21;
-    border: 1px solid #000;
+    background-color: #151b2e;
+    margin: 10px 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .container .box::before {
     content: "";
     position: absolute;
-    left: -2px;
     top: -2px;
+    left: -2px;
     right: -2px;
     bottom: -2px;
     background-color: #fff;
@@ -50,30 +59,29 @@ body {
 }
 
 .container .box:nth-child(1)::before {
-    background: linear-gradient(315deg, #ff0057, #e64a19);
+    background: linear-gradient(315deg, #ff0057, #e64a13);
 }
 
 .container .box:nth-child(2)::before {
-    background: linear-gradient(315deg, #c2b71c, #c53509);
+    background: linear-gradient(315deg, #00ff22, #13e6db);
 }
 
 .container .box:nth-child(3)::before {
-    background: linear-gradient(315deg, #08a1e7, #06705e);
+    background: linear-gradient(315deg, #5900ff, #e6d813);
 }
 
 .container .box:nth-child(4)::before {
-    background: linear-gradient(315deg, #10c010, #396e83);
+    background: linear-gradient(315deg, #00fff2, #aa13e6);
 }
 
 .container .box::after {
     content: "";
     position: absolute;
-    left: 0;
     top: 0;
-    background: rgba(255, 255, 255, .05);
+    left: 0;
     width: 50%;
     height: 100%;
-    pointer-events: none;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .container .box .content {
@@ -85,73 +93,68 @@ body {
 .container .box .content h2 {
     position: absolute;
     top: -60px;
-    left: 20px;
+    right: 20px;
     margin: 0;
     padding: 0;
     font-size: 10em;
     color: rgba(255, 255, 255, 0.05);
-    transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    -o-transition: 0.5s;
-}
-
-.box:hover .content h2 {
-    top: -130px;
-}
-
-.container .box .content h3 {
-    color: #fff;
-    font-size: 23px;
-    font-weight: 500;
-    margin: 0 0 10px;
-    padding: 0;
-}
-
-.container .box .content p {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 300;
-    margin: 0;
-    padding: 0;
-
-}
-
-.container .box .content a {
-    position: relative;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 10px 15px;
-    margin: 20px 0 0;
-    text-decoration: none;
-    display: inline-block;
     transition: 300ms ease-in-out;
     -webkit-transition: 300ms ease-in-out;
     -moz-transition: 300ms ease-in-out;
     -ms-transition: 300ms ease-in-out;
     -o-transition: 300ms ease-in-out;
+}
+
+.container .box:hover .content h2 {
+    top: -140px;
+}
+
+.container .box .content h3 {
+    color: #fff;
+    font-size: 23px;
+    padding: 10px 0;
+}
+
+.container .box .content p {
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+
+}
+
+.container .box .content a {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    margin: 20px 0 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 300ms ease-in-out;
     transform: translateY(-40px);
     -webkit-transform: translateY(-40px);
     -moz-transform: translateY(-40px);
     -ms-transform: translateY(-40px);
     -o-transform: translateY(-40px);
-    opacity: 0;
-    visibility: hidden;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .container .box .content a:hover {
-    color: #333;
+    color: #060c21;
     background-color: #fff;
-
 }
 
-.box:hover .content a {
-    transform: translateY(0);
-    opacity: 1;
+.container .box:hover .content a {
     visibility: visible;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
 }
