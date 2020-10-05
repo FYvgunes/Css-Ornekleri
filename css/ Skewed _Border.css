@@ -106,7 +106,7 @@ body {
 }
 
 .container .box:hover .content h2 {
-    top: -140px;
+    top: -120px;
 }
 
 .container .box .content h3 {
@@ -142,6 +142,7 @@ body {
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
+    z-index: 1;
 }
 
 .container .box .content a:hover {
