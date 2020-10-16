@@ -95,7 +95,8 @@
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: left;
+    overflow: hidden;
 }
 
 .menu ul li {
@@ -103,11 +104,31 @@
 }
 
 .menu ul li a {
+    position: relative;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 3em;
     font-weight: 500;
     color: #fff;
+    width: 100%;
 }
 
-.menu.active {}
+.menu ul li a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -100%;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: cornflowerblue;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.menu ul li a:hover::before {
+    left: 0;
+}
