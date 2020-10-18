@@ -195,6 +195,7 @@ nav ul li a {
     .col-3 {
         width: 30%;
     }
+
 }
 
 @media(max-width:760px) {
@@ -220,7 +221,37 @@ nav ul li a {
 
         height: 10em;
     }
+
+    .footer-nav {
+        align-items: center;
+        /* //text-align: center; */
+    }
+
+    .footer-col-3 {
+
+        text-align: center;
+        width: 100%;
+        float: none;
+    }
+
+    .footer-col-7 {
+        text-align: center;
+        width: 100%;
+        float: none;
+        color: #fff;
+    }
+
+    .footer-col-7 ul li a {
+        color: #fff;
+        font-size: 12px;
+        margin: 0;
+
+        padding: 10px 0;
+    }
+
+
 }
+
 
 @media(max-width:360px) {
 
