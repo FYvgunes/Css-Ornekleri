@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link rel="stylesheet" href="css/nav4.css" />
+  </head>
+  <body>
+    <div class="toggle"></div>
+    <div class="overlay"></div>
+    <div class="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Porject</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".toggle").click(function () {
+          $(".toggle").toggleClass("active");
+          $(".overlay").toggleClass("active");
+          $(".menu").toggleClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
