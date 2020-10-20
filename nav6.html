@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Screen Navbar</title>
+    <link rel="stylesheet" href="css/nav6.css" />
+  </head>
+
+  <body>
+    <div class="toogle active"></div>
+    <div class="sidebar">
+      <ul>
+        <li><a href="#" data-text="Home">Home</a></li>
+        <li><a href="#" data-text="About Me">About Me</a></li>
+        <li><a href="#" data-text="Service">Service</a></li>
+        <li><a href="#" data-text="Contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".toogle").click(function () {
+          $(".toogle").toggleClass("active");
+          $(".sidebar").toggleClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
