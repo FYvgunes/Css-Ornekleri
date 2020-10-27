@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive navbar</title>
+    <link rel="stylesheet" type="text/css" href="css/nav7.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="fontawesome-free-5.14.0-web/css/all.min.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Veysel Güneş</a>
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+      <nav>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">About ME</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Project</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="clearfix"></div>
+    </header>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".menu-toggle").click(function () {
+          $("nav").toggleClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
