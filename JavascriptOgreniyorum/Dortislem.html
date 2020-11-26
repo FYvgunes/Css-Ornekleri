@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascrip ile 4 İşlem</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      .game {
+        background-color: rgb(0, 96, 109);
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 100px 40px;
+      }
+      h1 {
+        font-size: 60px;
+      }
+      #Number1,
+      #Number2,
+      #Operator,
+      span {
+        font-size: 30px;
+        padding: 10px;
+      }
+      input {
+        padding: 10px;
+      }
+      input[type="button"] {
+        border: none;
+        color: white;
+        font-weight: 600;
+        padding: 13px;
+        background-color: crimson;
+      }
+      #True,
+      #False {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 15px;
+        font-size: 20px;
+      }
+      #False {
+        background-color: red;
+      }
+      #True {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="game">
+      <h1>Dört İşlem Uygulamsı</h1>
+      <span id="Number1">0</span>
+      <span id="Operator">*</span>
+      <span id="Number2">0</span>
+      <span>=</span>
+      <input type="text" id="result" />
+      <input type="button" id="answer" value="Cevapla" />
+      <div style="clear: both"></div>
+      <div id="True">0</div>
+      <div id="False">0</div>
+      <div style="clear: both"></div>
+    </div>
+
+    <script>
+      //bildirimler yapılıyor
+      console.log("ds");
+      var Number1,
+        Number2,
+        Operator,
+        result,
+        answer,
+        True = 0,
+        False = 0;
+
+      //html de nesnelere ulaşılıyor.
+      Number1 = document.getElementById("Number1");
+      Number2 = document.getElementById("Number2");
+      Operator = document.getElementById("Operator");
+      result = document.getElementById("result");
+      answer = document.getElementById("answer");
+      True = document.getElementById("True");
+      False = document.getElementById("False");
+
+      //rasgele sayı üretme fonksiyonu
+      function RandomNumber(min, max) {
+        var number = Math.floor(Math.random() * (max - min) + min);
+        return number;
+      }
+
+      //Oyunda yeni sorular üretmen için
+
+      function newQuestion() {
+        var operation = ["+", "-", "*", "/"];
+        Operator.textContent = operation[RandomNumber(0, 4)]; //Operetor seçimi
+        Number1.textContent = RandomNumber(0, 50);
+        Number2.textContent = RandomNumber(0, 50);
+
+        //kalansısz bölünmesi için
+        if (Operator.textContent == "/") {
+          while (true) {
+            Number2.textContent = RandomNumber(0, 50);
+          }
+          if (Number1.textContent % Number2.textContent == 0) {
+            return;
+          }
+        }
+      }
+
+      answer.onclick = function () {
+        var n1, n2, ans;
+        n1 = Number(Number1.textContent);
+        n2 = Number(Number2.textContent);
+        switch (Operator.textContent) {
+          case "+":
+            ans = n1 + n2;
+            break;
+          case "-":
+            ans = n1 - n2;
+            break;
+          case "*":
+            ans = n1 * n2;
+            break;
+          case "/":
+            ans = n1 / n2;
+            break;
+          default:
+            break;
+        }
+        if (result.value == ans) {
+          True.textContent = Number(True.textContent) + 1;
+        } else {
+          False.textContent = Number(False.textContent) + 1;
+        }
+      };
+      window.onload = function () {
+        newQuestion();
+      };
+    </script>
+  </body>
+</html>

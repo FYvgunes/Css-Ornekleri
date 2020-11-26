@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript kodları</title>
+  </head>
+  <body>
+    <p id="result"></p>
+    <input type="text" id="midlterm" />
+    <input type="text" id="final" />
+    <button type="button" onclick="noteresult();">Sonuç</button>
+  </body>
+
+  <script>
+    function noteresult() {
+      var midltermnote, finalnote, message, average;
+      midltermnote = Number(document.getElementById("midlterm").value);
+      finalnote = Number(document.getElementById("final").value);
+      average = midltermnote * 0.3 + finalnote * 0.7;
+      if (isNaN(midltermnote)) {
+        message = "Vize notunuzu rakam olarak giriniz";
+      } else if (isNaN(finalnote)) {
+        message = "Final notunuzu rakam olarak giriniz";
+      } else {
+        if (average < 45) {
+          message = "Kaldınız Harf Notunuz:FF";
+        } else if (average >= 45 && average <= 60) {
+          message = "harf Notunuz:DD";
+        } else if (average >= 60 && average <= 80) {
+          message = "harf notunuz:BB";
+        } else if (average >= 80 && average <= 100) {
+          message = "Harf notunuz:AA";
+        } else {
+          message = "Notlarınızı 0 ile 100 arasında giriniz";
+        }
+      }
+      document.getElementById("result").innerHTML = message;
+    }
+  </script>
+</html>
