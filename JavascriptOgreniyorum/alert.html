@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alert İşlemleri</title>
+  </head>
+  <body>
+    <input type="text" name="username" />
+    <button type="button" onclick="validation();">Click</button>
+    <p id="result" style="display: none"></p>
+
+    <script>
+      function validation() {
+        var result,
+          massege = "",
+          valueinput;
+        valueinput = document.getElementById("username").value;
+        result = document.getElementById("result");
+        result.style.display = "Block";
+        if (valueinput == "") {
+          message = "Lütfen bu alanı doldurunuz";
+        } else if (isNaN(valueinput)) {
+          message = "Lütfen bu alana sayı giriniz";
+        } else if (valueinput < 1 || valueinput > 6) {
+          message = "Bu alana  1 den ve 6 arasında bir değer giriniz";
+        } else {
+          message = "işleminiz başarış bir şekilde gerçekleştir";
+        }
+        result.innerHTML = message;
+      }
+
+      function boxes() {
+        var message, getvalue;
+        getvalue = prompt("Lütfen Bir Ders adı giriniz", "Html");
+
+        if (getvalue == null || getvalue == "") {
+          message = "Bu kısı boş geçilmez";
+        } else if (getvalue == "Javascript") {
+          message = "Girdiğiniz deger" + getvalue + "olarak dogru";
+        } else {
+          message = "Bu dersin neresinde " + getvalue + " İsmi geçti";
+        }
+        result.innerHTML = message;
+      }
+    </script>
+  </body>
+</html>
