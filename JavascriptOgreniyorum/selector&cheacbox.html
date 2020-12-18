@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select ve Checkbox olayları</title>
+  </head>
+  <body>
+    <div>
+      <label for="city">City</label>
+      <select name="" id="city">
+        <option value="js">javascipt</option>
+        <option value="react">react js</option>
+        <option value="Angular">Anguler js</option>
+        <option value="Vue">vue js</option>
+        <option value="Node">Node js</option>
+      </select>
+    </div>
+    <div>
+      <input type="checkbox" id="accept" />
+      <label for="accept">I read privacy policy and ı agree</label>
+    </div>
+    <button type="button" id="btn">Gönder</button>
+
+    <script>
+      var btn = document.querySelector("#btn");
+      var city = document.querySelector("#city");
+      btn.addEventListener("click", function () {
+        var valueselecter = city.options[city.selectedIndex].value;
+        alert(valueselecter);
+      });
+    </script>
+  </body>
+</html>
