@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript ile animasyon yapımı</title>
+  </head>
+  <style></style>
+
+  <body>
+    <!-- Dügümler arasında gexinme  -->
+    <h3 id="head3">Ben Div Dışındayım</h3>
+
+    <div class="" id="parant">
+      <p id="p1">Angular js</p>
+      <p id="p2">React Js</p>
+      <p id="p3">VUe Js</p>
+    </div>
+    <button
+      type="button"
+      class="button"
+      id="button"
+      onclick="Javascript:createHtml()"
+    >
+      Eleman Ekle
+    </button>
+    <button type="button" class="button" onclick="Javascript:deleteHTMLDom()">
+      Delete
+    </button>
+    <button type="button" onclick="Javascript:replacaDom()">Replace</button>
+
+    <script>
+      // Eleman Ekleme
+      var parant = document.querySelector("#parant");
+      var p3 = document.querySelector("#p3");
+      var auot = document.querySelector("#button");
+
+      function createHtml() {
+        var p = document.createElement("p");
+        var text = document.createTextNode("Veysel");
+        p.appendChild(text);
+        parant.appendChild(p);
+      }
+
+      function deleteHTMLDom() {
+        p3.parentNode.removeChild(p3);
+      }
+
+      function replacaDom() {
+        var p1 = document.querySelector("#p1");
+        var p = document.createElement("p");
+        var text = document.createTextNode("Yeni Oluşturuldum");
+        p.appendChild(text);
+        parant.replaceChild(p, p1);
+      }
+
+      //   var elementNodes = document.querySelector("#parant").children;
+      //   var i,
+      //     result = "";
+      //   //   for (i = 0; i < elementNodes.leng th; i++) {
+      //   //     result += elementNodes[i].firstChild.nodeValue + "\n";
+      //   //   }
+      //   alert(elementNodes[5].textContent);
+
+      //     var num1 = 6,
+      //       num2 = 7;
+      //     var btn = document.querySelector("#btn");
+
+      //     btn.addEventListener("mouseup", function () {
+      //       toplam(num1, num2);
+      //     });
+      //     function toplam(b, a) {
+      //       document.querySelector("#result").innerHTML = a + b;
+      //     }
+    </script>
+  </body>
+</html>

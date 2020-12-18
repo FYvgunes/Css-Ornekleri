@@ -18,6 +18,7 @@
     ></script>
     <title>javascript kodları</title>
   </head>
+
   <body>
     <!-- <p id="result"></p>
     <input type="text" id="midlterm" />
@@ -28,83 +29,38 @@
     <button type="button" onclick="resizewindow()">Resize window</button>
     <button type="button" onclick="movewindow()">Move window</button>
     <button type="button" onclick="closewindow()">Close window</button> -->
+
     <div class="container mt-3">
       <div class="form-gruop">
         <input
-          type="number"
-          max="7"
-          min="3"
-          class="form-control"
-          name="number"
-          id="number"
-          required
+          type="text"
+          name="username"
+          id="username"
+          class="form-control mt-3"
         />
+
+        <button type="button" onclick="show();" class="btn btn-success mt-2">
+          Ekle
+        </button>
+        <p name="test" style="display: none" class="alert alert-dark"></p>
+        <p name="test" style="display: none" class="alert alert-dark"></p>
+        <p name="test" style="display: none" class="alert alert-dark"></p>
       </div>
-      <button type="button" onclick="validfuntion();" class="btn btn-success">
-        Gönder
-      </button>
-      <p id="resultfalse" style="display: none" class="alert alert-danger"></p>
-      <p id="resulttrue" style="display: none" class="alert alert-success"></p>
     </div>
-    <p id="result" style="color: green"></p>
   </body>
 
   <script>
-    function validfuntion() {
-      var resultfalse, resulttrue, message, valueinput;
-      valueinput = document.getElementById("number");
-      resultfalse = document.getElementById("resultfalse");
-      resulttrue = document.getElementById("resulttrue");
-
-      if (valueinput.checkValidity() == false) {
-        resultfalse.style.display = "block";
-        resulttrue.style.display = "none";
-        resultfalse.innerHTML = valueinput.validationMessage;
-      } else {
-        resultfalse.style.display = "none";
-        resulttrue.style.display = "block";
-        resulttrue.innerHTML = "Hic bir sıkıntı gözükmüyor";
+    function show() {
+      var username, usernames, i, j;
+      usernames = document.getElementsByName("test");
+      usernames.style.display = "block";
+      for (i = 0; i < usernames.length; i++) {
+        usernames[i].style.display = "block";
       }
 
-      // var result, newwindow;
-      // result = getElementById("result");
-
-      // function openwindow() {
-      //   newwindow = window.open("", "newwindow", "width=500, height=500");
-      //   newwindow.document.write("Bu sayfa javascrip ile açıldı");
-      // }
-      // function resizewindow() {
-      //   newwindow.resizeto(1000, 800);
-      // }
-      // function movewindow() {
-      //   newwindow.moveto(450, 500);
-      // }
-      // function closewindow() {
-      //   newwindow.closewindow();
-      // }
-      // function noteresult() {
-      //   var midltermnote, finalnote, message, average;
-      //   midltermnote = Number(document.getElementById("midlterm").value);
-      //   finalnote = Number(document.getElementById("final").value);
-      //   average = midltermnote * 0.3 + finalnote * 0.7;
-      //   if (isNaN(midltermnote)) {
-      //     message = "Vize notunuzu rakam olarak giriniz";
-      //   } else if (isNaN(finalnote)) {
-      //     message = "Final notunuzu rakam olarak giriniz";
-      //   } else {
-      //     if (average < 45) {
-      //       message = "Kaldınız Harf Notunuz:FF";
-      //     } else if (average >= 45 && average <= 60) {
-      //       message = "harf Notunuz:DD";
-      //     } else if (average >= 60 && average <= 80) {
-      //       message = "harf notunuz:BB";
-      //     } else if (average >= 80 && average <= 100) {
-      //       message = "Harf notunuz:AA";
-      //     } else {
-      //       message = "Notlarınızı 0 ile 100 arasında giriniz";
-      //     }
-      //   }
-      //   document.getElementById("result").innerHTML = message;
+      for (j = 0; j < usernames.length; j++) {
+        usernames[j].innerHTML = j + 1 + ".NAme Elemanı";
+      }
     }
   </script>
 </html>

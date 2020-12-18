@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sayfa Yönlerdirme</title>
+  </head>
+  <body>
+    <p id="result"></p>
+
+    <script>
+      go("#result", "http://www.google.com", 3);
+      function go(id, adress, second) {
+        if (second === 0) {
+          window.location.href = adress;
+          return;
+        }
+        document.querySelector("#result").textContent =
+          second + " Saniye sonra yönlerileceksiniz ";
+        second--;
+
+        setTimeout(function () {
+          go(id, adress, second);
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show Hide</title>
+  </head>
+  <style>
+    .box {
+      padding: 10px 100px;
+    }
+    span {
+      display: block;
+      font-size: 25px;
+      color: blue;
+      font-weight: 700;
+      background-color: rgb(187, 172, 149);
+      padding: 0 10px;
+    }
+  </style>
+
+  <body>
+    <div class="box">
+      <span id="sp" onclick="Javacsript:show()"> + </span>
+      <p id="result" style="display: none; transition: 0.3s">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum deserunt
+        quod neque nisi fuga mollitia reiciendis nobis obcaecati. Porro
+        voluptatum quam veritatis maxime, aliquid placeat tenetur! Harum dolore
+        nihil, dolorem cupiditate sequi explicabo provident dolores voluptates
+        facilis eligendi magnam sint odio inventore natus, non reprehenderit
+        unde fugiat sunt similique, doloremque pariatur esse?
+      </p>
+    </div>
+    <div class="box">
+      <span id="sp2" onclick="Javacsript:show2()"> + </span>
+      <p id="result2" style="display: none; transition: 0.3s">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum deserunt
+        quod neque nisi fuga mollitia reiciendis nobis obcaecati. Porro
+        voluptatum quam veritatis maxime, aliquid placeat tenetur! Harum dolore
+        nihil, dolorem cupiditate sequi explicabo provident dolores voluptates
+        facilis eligendi magnam sint odio inventore natus, non reprehenderit
+        unde fugiat sunt similique, doloremque pariatur esse?
+      </p>
+    </div>
+
+    <script>
+      function show() {
+        var sp = document.querySelector("#sp");
+        var result = document.querySelector("#result");
+        if (result.style.display == "none") {
+          result.style.display = "Block";
+          sp.innerHTML = "+";
+        } else {
+          result.style.display = "none";
+
+          sp.innerHTML = "-";
+          sp.style.fontSize = "25px";
+          sp.style.color = "red";
+          sp.style.fontWeight = "700";
+        }
+      }
+      function show2() {
+        var sp = document.querySelector("#sp2");
+        var result = document.querySelector("#result2");
+        if (result.style.display == "none") {
+          result.style.display = "Block";
+          sp.innerHTML = "+";
+          sp.style.transition = ".5s";
+        } else {
+          result.style.display = "none";
+
+          sp.innerHTML = "-";
+          sp.style.fontSize = "25px";
+          sp.style.color = "red";
+          sp.style.fontWeight = "700";
+        }
+      }
+    </script>
+  </body>
+</html>

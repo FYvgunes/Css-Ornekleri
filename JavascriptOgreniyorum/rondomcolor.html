@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rondom Color</title>
+    <style>
+      #container {
+        width: 500px;
+        height: 500px;
+        background-color: crimson;
+      }
+      #button {
+        background-color: blue;
+        border: none;
+        width: 500px;
+        height: 50px;
+        color: #fff;
+        margin-top: 25px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <button id="button">Click Me</button>
+
+    <script>
+      let colors = ["Green", "yellow", "brown", "Crimton", "Ping"];
+
+      let button = document.getElementById("button");
+
+      button.addEventListener("click", function () {
+        var rondomcolor = colors[Math.floor(Math.random() * colors.length)];
+
+        let container = document.getElementById("container");
+
+        container.style.background = rondomcolor;
+      });
+    </script>
+  </body>
+</html>
