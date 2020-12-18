@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karakter sınırlama</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="tc" placeholder="Tc Kimlik Numarası" />
+      <p id="result"></p>
+    </div>
+
+    <script>
+      var message,
+        result,
+        chreacter = 11,
+        chracterlenght;
+      tc = document.querySelector("#tc");
+      result = document.querySelector("#result");
+      tc.onkeydown = charatercontrol;
+      tc.onkeyup = charatercontrol;
+
+      function charatercontrol() {
+        chracterlenght = this.value.length;
+        if (chreacter >= chracterlenght) {
+          var lastlength = chreacter - chracterlenght;
+          result.textContent = lastlength + " Karakter kaldı";
+        } else {
+          this.value = this.value.substr(0, chreacter);
+        }
+      }
+    </script>
+  </body>
+</html>
