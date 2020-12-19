@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OOP javscript</title>
+    <script>
+      const $ = (par) => document.querySelector(par);
+    </script>
+  </head>
+  <body>
+    <p id="resutl"></p>
+
+    <script>
+      "use strict";
+      class person {
+        constructor(p1, p2, p3) {
+          this.name = p1;
+          this.age = p2;
+          this.weight = p3;
+        }
+
+        getname() {
+          return this.name;
+        }
+        getAge() {
+          return this.age;
+        }
+        getweight() {
+          return this.weight;
+        }
+        setname(x) {
+          this.name = x;
+        }
+        setAge(x) {
+          this.age = x;
+        }
+        setweight(x) {
+          this.weight = x;
+        }
+      }
+
+      var myObject = new person("Veysel", 25, 23);
+      $("#resutl").innerHTML =
+        myObject.getname() +
+        "<br>" +
+        myObject.getAge() +
+        "<br>" +
+        myObject.getweight() +
+        "<br>";
+      myObject.setname("Güneş");
+      myObject.setAge(30);
+      myObject.setweight(12);
+      $("#resutl").innerHTML +=
+        myObject.getname() +
+        "<br>" +
+        myObject.getAge() +
+        "<br>" +
+        myObject.getweight() +
+        "<br>";
+    </script>
+  </body>
+</html>
