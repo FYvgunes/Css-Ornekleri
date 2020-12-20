@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spread Opertor</title>
+  </head>
+  <body>
+    <p id="result"></p>
+    <script>
+      //... spread operator için kullanılır
+      //Nesnelerin her birinin dğer olarak alınmasını sağlar
+      //dizileri tek tek dolaşmak için fora ihtiyaç kalmaz
+      //   let langs = ["JS", "React", "Ang", "Vue", "C#"];
+      //   let langs2 = ["css", "html", "jq", "asp", "mysql", "node"];
+      //   //document.querySelector("#result").innerHTML = langs;
+      //   let joinarray = [...langs, ...langs];
+      //   console.log(joinarray);
+
+      //   function sum(x, y, z) {
+      //     return x + y + z;
+      //   }
+      //   let numbers = [1, 2, 3];
+      //   document.querySelector("#result").innerHTML = sum(...numbers);
+
+      //For of kullanımı
+      let person = "javascrip ecmascript 6 dersleri";
+      let i;
+      for (i of person)
+        document.querySelector("#result").innerHTML += i + "<br>";
+    </script>
+  </body>
+</html>
