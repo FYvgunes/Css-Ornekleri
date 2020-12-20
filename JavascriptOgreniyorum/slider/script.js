@@ -1,6 +1,6 @@
 var images = [];
-var time = 3000;
-let i = 0;
+var time = 5000;
+var i = 0;
 
 images[0] = "/img/1.jpg";
 images[1] = "/img/2.jpg";
@@ -19,5 +19,32 @@ function Changeimg() {
     setTimeout("Changeimg()", time);
 
 }
+
+next = document.querySelector("#next");
+prev = document.querySelector("#prev");
+
+next.addEventListener("click", function () {
+
+    i++;
+
+
+    if (i > images.length - 1) {
+        i = 0;
+    }
+    document.slide.src = images[i];
+})
+prev.addEventListener("click", function () {
+
+    i--;
+
+
+    if (i < 0) {
+        i = images.length - 1;
+    }
+    document.slide.src = images[i];
+})
+
+
+
 
 window.onload = Changeimg;
