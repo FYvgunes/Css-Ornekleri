@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Json Datalarının oluşturulması ve kullanılması Local değişkende tutulması
+    </title>
+  </head>
+  <body>
+    <p id="result"></p>
+
+    <script>
+      let txt, obj, storedDb, json;
+
+      obj = { firstname: "veysel", Lastname: "Güneş" };
+      json = JSON.stringify(obj);
+      localStorage.setItem("StorecJson", json);
+      txt = localStorage.getItem("StorecJson");
+      storedDb = JSON.parse(txt);
+
+      document.querySelector("#result").innerHTML =
+        storedDb.firstname + "<br>" + storedDb.Lastname;
+    </script>
+  </body>
+</html>

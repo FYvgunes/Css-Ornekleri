@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Kullanımı</title>
+  </head>
+  <body>
+    <p id="result"></p>
+  </body>
+  <script>
+    let Dataset = new Set();
+    Dataset.add("javascript");
+    Dataset.add("Css");
+    Dataset.add("html");
+    Dataset.add("Qguery");
+    Dataset.add("Php");
+
+    document.querySelector("#result").innerHTML =
+      Dataset.size +
+      "<br>" +
+      Dataset.delete("Css") +
+      "<br>" +
+      Dataset.size +
+      "<br>" +
+      Dataset.clear() +
+      "<br>" +
+      Dataset.size;
+  </script>
+</html>
