@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+background-color: #1d1f32;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3rem;
+   
+}
+.movie{
+    width: 300px;
+    
+    position: relative;
+    background-color: #292946;
+    color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius:5px;
+    margin: 2rem;
+    overflow: hidden;
+}
+.movie img{
+    width: 100%;
+   
+    object-fit: cover;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+}
+.movie h2{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    padding: 20px 10px;
+    font-weight: 400;
+}
+.movie h2 span{
+position: absolute;
+right: 0;
+background-color: #212138;
+padding: 5px 10px;
+font-size: 19px;
+font-weight: 600;
+color: red;
+}
+.movie h2 span.green{
+    color: rgb(0, 255, 0);
+}
+.movie h2 span.orenge{
+    color: rgb(255, 102, 0);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+
+}
+.header form input{
+    background-color: transparent;
+    border:none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -ms-transition: .5s all;
+    -o-transition: .5s all;
+}
+.header  h1{
+    color: #fff;
+    font-size: 2rem;
+
+}
+.header form input::placeholder{
+    color: #FDFDFD;
+
+}
+.header form input:focus{
+    outline: none;
+    background-color: #373B69;
+}
+.movie .overview{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #fdfdfd;
+    height:90%;
+    
+    color:#111;
+    padding: 2rem;
+    transition: .3s all ease-in;
+    -webkit-transition: .3s all ease-in;
+    -moz-transition: .3s all ease-in;
+    -ms-transition: .3s all ease-in;
+    -o-transition: .3s all ease-in;
+    opacity: 0;
+    overflow: hidden;
+    
+}
+.movie:hover .overview{
+    opacity: 1;
+} 
+@media(max-width:400px){
+    .movie{
+        margin:1rem;
+        padding: 0;
+    }
+    main{
+       
+        padding: 0;
+    }
+}
